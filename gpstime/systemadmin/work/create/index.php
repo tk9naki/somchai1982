@@ -1,0 +1,11 @@
+<?php
+include('../navwork/index.php');
+	if(isset($_POST['submit'])){
+		$partid=trim($_POST['partid']);
+		$workname=trim($_POST['workname']);
+		$chk=0;
+		$object->Registerwork($partid,$workname,$chk);
+		echo"<script>window.location='../';</script>";
+	}
+include('../f.html');
+?>

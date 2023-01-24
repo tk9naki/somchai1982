@@ -1,0 +1,32 @@
+<?php
+include('../navsetupdata/index.php');
+if(isset($_POST['submit'])){
+$sdid=trim($_POST['sdid']);
+$office=trim($_POST['office']);
+$system=trim($_POST['system']);
+$admin=trim($_POST['admin']);
+$rootmail=trim($_POST['rootmail']);
+$rootpass=trim($_POST['rootpass']);
+$hostmail=trim($_POST['hostmail']);
+$footer1=trim($_POST['footer1']);
+$footer2=trim($_POST['footer2']);
+$h1=trim($_POST['h1']);
+$m1=trim($_POST['m1']);
+$s1=trim($_POST['s1']);
+$h2=trim($_POST['h2']);
+$m2=trim($_POST['m2']);
+$s2=trim($_POST['s2']);
+$h3=trim($_POST['h3']);
+$m3=trim($_POST['m3']);
+$s3=trim($_POST['s3']);
+$h4=trim($_POST['h4']);
+$m4=trim($_POST['m4']);
+$s4=trim($_POST['s4']);
+$lat=trim($_POST['lat']);
+$lon=trim($_POST['lon']);
+$distance=trim($_POST['distance']);
+	$object->Updatesetupdata($sdid,$office,$system,$admin,$rootmail,$rootpass,$hostmail,$footer1,$footer2,$h1,$m1,$s1,$h2,$m2,$s2,$h3,$m3,$s3,$h4,$m4,$s4,$lat,$lon,$distance);
+	echo"<script>window.location.href = '../';</script>";
+}
+include('../f.html');
+?>
