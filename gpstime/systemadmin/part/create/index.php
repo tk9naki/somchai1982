@@ -1,0 +1,10 @@
+<?php
+include('../navpart/index.php');
+	if(isset($_POST['submit'])){
+		$partname=trim($_POST['partname']);
+		$chk=0;
+		$object->Registerpart($partname,$chk);
+		echo"<script>window.location='../';</script>";
+	}
+include('../f.html');
+?>
