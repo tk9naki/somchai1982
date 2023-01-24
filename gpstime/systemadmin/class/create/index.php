@@ -1,0 +1,10 @@
+<?php
+include('../navclass/index.php');
+	if(isset($_POST['submit'])){
+		$classname=trim($_POST['classname']);
+		$chk=0;
+		$object->Registerclass($classname,$chk);
+		echo"<script>window.location='../';</script>";
+	}
+include('../f.html');
+?>
